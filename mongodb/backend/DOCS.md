@@ -5,6 +5,12 @@
 - [Auth](#auth)
 	- [Authenticate](#authenticate)
 	
+- [Todos](#todos)
+	- [Create todos](#create-todos)
+	- [Delete todos](#delete-todos)
+	- [Retrieve todos](#retrieve-todos)
+	- [Update todos](#update-todos)
+	
 - [User](#user)
 	- [Create user](#create-user)
 	- [Delete user](#delete-user)
@@ -35,6 +41,73 @@
 | Name    | Type      | Description                          |
 |---------|-----------|--------------------------------------|
 | access_token			| String			|  <p>Master access_token.</p>							|
+
+# Todos
+
+## Create todos
+
+
+
+	POST /todos
+
+
+### Parameters
+
+| Name    | Type      | Description                          |
+|---------|-----------|--------------------------------------|
+| access_token			| String			|  <p>user access token.</p>							|
+| descripcion			| 			|  <p>Todos's descripcion.</p>							|
+| estado			| 			|  <p>Todos's estado.</p>							|
+| fecha_creacion			| 			|  <p>Todos's fecha_creacion.</p>							|
+| fecha_actualizacion			| 			|  <p>Todos's fecha_actualizacion.</p>							|
+
+## Delete todos
+
+
+
+	DELETE /todos/:id
+
+
+### Parameters
+
+| Name    | Type      | Description                          |
+|---------|-----------|--------------------------------------|
+| access_token			| String			|  <p>user access token.</p>							|
+
+## Retrieve todos
+
+
+
+	GET /todos
+
+
+### Parameters
+
+| Name    | Type      | Description                          |
+|---------|-----------|--------------------------------------|
+| access_token			| String			|  <p>user access token.</p>							|
+| q			| String			| **optional** <p>Query to search.</p>							|
+| page			| Number			| **optional** <p>Page number.</p>							|
+| limit			| Number			| **optional** <p>Amount of returned items.</p>							|
+| sort			| String[]			| **optional** <p>Order of returned items.</p>							|
+| fields			| String[]			| **optional** <p>Fields to be returned.</p>							|
+
+## Update todos
+
+
+
+	PUT /todos/:id
+
+
+### Parameters
+
+| Name    | Type      | Description                          |
+|---------|-----------|--------------------------------------|
+| access_token			| String			|  <p>user access token.</p>							|
+| descripcion			| 			|  <p>Todos's descripcion.</p>							|
+| estado			| 			|  <p>Todos's estado.</p>							|
+| fecha_creacion			| 			|  <p>Todos's fecha_creacion.</p>							|
+| fecha_actualizacion			| 			|  <p>Todos's fecha_actualizacion.</p>							|
 
 # User
 
